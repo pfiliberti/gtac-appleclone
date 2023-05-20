@@ -1,6 +1,6 @@
 # PS2 keyboard interface for Apple II
 
-This program is the interface code for AVR with a PS2 keyboard. It implements a PS2 keyboard interface and an Apple II parallel interface. The AVR connects directly into the Apple II keyboard connector instead of the computer's keyboard. The code configures the PS2 keyboard, accepts scan codes, and converts the AT scan codes to Apple II keyboard codes. The AVR to Apple II interface is a parallel interface with one strobe signal.
+This program is the interface code of at AVR ATtiny84 for PS2 keyboard. It implements a PS2 keyboard interface and an Apple II parallel interface. The AVR connects directly into the Apple II keyboard connector instead of the computer's keyboard. The code configures the PS2 keyboard, accepts scan codes, and converts the AT scan codes to Apple II keyboard codes. The AVR to Apple II interface is a parallel interface with one strobe signal.
 
 ## Resources
 
@@ -41,9 +41,3 @@ The general connectivity is as follows:
 | Strobe     | PA7    | 24      | Out               |
 | 7-bit code | PA0..6 | 8..13,7 | Out               |
 
-## Scan code processing
-
-- Only pass make and break codes for keys in range 1 to 83
-- Handle 'E0' modifier for keypad by removing the 'E0' which will effectively reduce any keyboard to one that is equivalent to an 83 key keyboard.
-- Discard PrtScrn E0,2A,E0,37 and E0,B7,E0,AA; my PC does not support print screen.
-- Convert E1 sequence of Pause/Break to scan code 54h/84
