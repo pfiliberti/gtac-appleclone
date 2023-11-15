@@ -8,14 +8,14 @@ The font rom in the GTAC 2 clone has the wiring from the FONT ROM to the shift r
 On the GTAC 2 the following bits of the ROM are tied to the shiftregister in this order:
 
 FONT ROM	LS166 SHIFT REGISTER
-PIN 11 - O3	PIN 3 - B
-PIN 17 - 08	PIN 4 - C
-PIN 16 - 07	PIN 5 - D
-PIN 15 - O6	PIN 10 - E
-PIN 14 - O5	PIN 11 - F
-PIN 13 - O4	PIN 12 - G
-PIN 10 - O2	PIN 14 - H
-PIN 09 - Flash/Inverse Hardware
+- PIN 11 - O3	PIN 3 - B
+- PIN 17 - 08	PIN 4 - C
+- PIN 16 - 07	PIN 5 - D
+- PIN 15 - O6	PIN 10 - E
+- PIN 14 - O5	PIN 11 - F
+- PIN 13 - O4	PIN 12 - G
+- PIN 10 - O2	PIN 14 - H
+- PIN 09 - Flash/Inverse Hardware
 
 The bits are shifted out H to A. A is tied to the flash/inverse hardware.
 
