@@ -1,0 +1,25 @@
+The font rom in the GTAC 2 clone has the wiring from the rom to the
+shift register altered from the standard way in an Apple II. Because
+of this you cannot take an font rom image for an Apple II such as 
+the Dan Paymar image with LowerCase and use it on the GTAC 2 without
+modifications.
+
+On the GTAC 2 the following bits of the ROM are tied to the shift
+register in this order:
+
+FONT ROM	LS166 SHIFT REGISTER
+PIN 11 - O3	PIN 3 - B
+PIN 17 - 08	PIN 4 - C
+PIN 16 - 07	PIN 5 - D
+PIN 15 - O6	PIN 10 - E
+PIN 14 - O5	PIN 11 - F
+PIN 13 - O4	PIN 12 - G
+PIN 10 - O2	PIN 14 - H
+PIN 09 - Flash/Inverse Hardware
+
+The bits are shifted out H to A. A is tied to the flash/inverse hardware.
+
+The program reversebits.c will take the input of an Apple standard
+font rom image and modify it and output the version good for GTAC
+use on stdout. The program showfont.c will read the GTAC image and
+display the font chars as acii images.
